@@ -15,7 +15,14 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp({
+      apiKey: "AIzaSyCI-hFV6ptiCr42G1dUWKF7ef_VoogYUvc",
+      authDomain: "login-crud-53548.firebaseapp.com",
+      projectId: "login-crud-53548",
+      storageBucket: "login-crud-53548.appspot.com",
+      messagingSenderId: "473741299417",
+      appId: "1:473741299417:web:af8ceec570db0254b7f8c8"
+    })),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage())],
