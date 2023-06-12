@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-title>
+            Listado de Imagenes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-content">
+    <div class="flex">
+        <ion-button (click)="ngOnInit()" color="success">Recargar</ion-button>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6" *ngFor="let img of data" style="border: 1px solid red;">
+                <ion-img [src]="img.url"></ion-img>
+                <p>LATITUD: {{ img.latitude }}</p>
+                <p>LONGITUD: {{ img.longitude }}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
